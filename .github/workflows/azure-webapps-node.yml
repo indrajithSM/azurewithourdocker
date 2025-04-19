@@ -32,4 +32,4 @@ jobs:
           resourceGroup: fastapi-rg
           imageToBuild: fastapiacr112003.azurecr.io/fastapi-fastapi:v1
         env:
-          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+          azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
