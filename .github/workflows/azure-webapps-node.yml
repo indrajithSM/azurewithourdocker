@@ -26,14 +26,10 @@ jobs:
       - name: Deploy to Azure Container Apps
         uses: azure/container-apps-deploy-action@v1
         with:
-          appSourcePath: ./
-          acrName: fastapiacr112003
+          appSourcePath: .
+          registryUrl: fastapiacr112003.azurecr.io
           containerAppName: fastapi-nodocker-app
           resourceGroup: fastapi-rg
           imageToBuild: fastapiacr112003.azurecr.io/fastapi-fastapi:v1
-          registryUrl: fastapiacr112003.azurecr.io
-          environment: fastapi-env
-          location: eastus
-          startupCommand: ./startup.sh
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
