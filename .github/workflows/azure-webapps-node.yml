@@ -27,7 +27,7 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           appSourcePath: ./
-          acrName: <your-acr-name> # optional if using build service
+          acrName: fastapiacr112003
           containerAppName: fastapi-nodocker-app
           resourceGroup: fastapi-rg
           imageToBuild: fastapiacr112003.azurecr.io/fastapi-fastapi:v1
